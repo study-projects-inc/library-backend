@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Library.Data.Models
+namespace Library.Infrastructure
 {
     public partial class Author
     {

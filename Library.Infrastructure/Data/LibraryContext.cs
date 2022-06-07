@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Library.Data.Models;
+using Library.Infrastructure;
 
-namespace Library.Data.Data
+namespace Library.Infrastructure.Data
 {
     public partial class LibraryContext : DbContext
     {
@@ -19,12 +19,12 @@ namespace Library.Data.Data
 
         public virtual DbSet<Author> Authors { get; set; } = null!;
 
-/*        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 //warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlite("Data Source=../../library.db");
+                optionsBuilder.UseSqlite("Data Source=../Library.db");
             }
         }*/
 
